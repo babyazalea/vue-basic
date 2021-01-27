@@ -25,7 +25,9 @@
       </p>
       <!-- v-else must be just beside v-if directive! and also can use v-else-if. -->
       <ul v-else>
-        <li v-for="(goal, index) in goals">{{goal}} - {{index}}</li>
+        <li v-for="(goal, index) in goals" @click="removeGoal(index)">
+          {{goal}} - {{index}}
+        </li>
       </ul>
       <!-- <ul>
         <li v-for="num in 10">{{num}}</li>
